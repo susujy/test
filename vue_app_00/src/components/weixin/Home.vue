@@ -1,8 +1,6 @@
 <template>
     <div class="page-tabbar">
         <div class="page-wrap">
-            <titlebar leftTitle="微信(11)" :search="mysearch" :add="myadd" :rightFirstImg="require('../../assets/ic_search.png')" :rightSecondImg="require('../../assets/ic_add.png')">
-            </titlebar>
             <!-- 2.div——保留出标题的48px -->
             <div style="margin-top:48px;"></div>
             <!-- 3.切换面板列表 -->

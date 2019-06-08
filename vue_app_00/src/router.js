@@ -2,8 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 // 引入美妆测评主页面
 import Home from './components/test/Home'
+// 引入评论功能
+import comment from './components/test/common/comment.vue'
+// 分类子组件
+import classify from './components/test/common/classify.vue'
 // import HelloContainer from "./components/HelloWorld.vue"
-// import Exam01 from "./components/Exam01.vue"
+// import Exam01 from "./components/Exam01.vuesssss"
 // import ExamMessageBox02 from "./components/ExamMessageBox02"
 // import ExamField03 from "./components/ExamField03"
 // import Login04 from "./components/Login04"
@@ -19,7 +23,12 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    // 美妆测评主页面
     {path:'/',component:Home},
+    // 评论页面
+    {path:"/comment",component:comment},
+    // 分类子组件
+    {path:"/classify",component:classify},
     // {path:'/Exam01',component:Exam01},
     // {path:'/ExamMessageBox02',component:ExamMessageBox02},
     // {path:'/ExamField03',component:ExamField03},
