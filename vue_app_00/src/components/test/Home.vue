@@ -3,8 +3,16 @@
          <!-- 3.切换面板列表 -->
             <mt-tab-container class="page-tabbar-container" v-model="active">
                 <mt-tab-container-item id="message">
-                    <!-- <messagelist></messagelist> -->
+                    首页
+                </mt-tab-container-item>
+                <mt-tab-container-item id="contact">
                     <class-item></class-item>
+                </mt-tab-container-item>
+                <mt-tab-container-item id="discuss">
+                    论坛
+                </mt-tab-container-item>
+                 <mt-tab-container-item id="mine">
+                    我的
                 </mt-tab-container-item>
             </mt-tab-container>
             <!-- 4.tabbar列表 -->
@@ -15,10 +23,10 @@
                 <mt-tab-item id="contact" @click.native="changeState(1)">
                     <tabbaricon :selectedImage="require('../../assets/cao(1).png')" :normalImage="require('../../assets/cao.png')" :focused="currentIndex[1].isSelect" ></tabbaricon>产品
                 </mt-tab-item>
-                <mt-tab-item id="find" @click.native="changeState(2)">
+                <mt-tab-item id="discuss" @click.native="changeState(2)">
                     <tabbaricon :selectedImage="require('../../assets/pingjia(1).png')" :normalImage="require('../../assets/pingjia.png')" :focused="currentIndex[2].isSelect" ></tabbaricon>论坛
                 </mt-tab-item>
-                <mt-tab-item id="me" @click.native="changeState(3)">
+                <mt-tab-item id="mine" @click.native="changeState(3)">
                     <tabbaricon :selectedImage="require('../../assets/mine(1).png')" :normalImage="require('../../assets/mine.png')" :focused="currentIndex[3].isSelect" ></tabbaricon>我的
                 </mt-tab-item>
             </mt-tabbar>
@@ -62,9 +70,7 @@ export default {
                     this.currentIndex[i].isSelect=true;
                 }else{//4.其他元素未false
                      this.currentIndex[i].isSelect=false;
-                }
-                
-                
+                }  
             }
             
         }
