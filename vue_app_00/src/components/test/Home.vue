@@ -3,15 +3,18 @@
          <!-- 3.切换面板列表 -->
             <mt-tab-container class="page-tabbar-container" v-model="active">
                 <mt-tab-container-item id="message">
-                    首页
+                    <header-top   tips="阿玛尼"></header-top>
                 </mt-tab-container-item>
                 <mt-tab-container-item id="contact">
-                    <class-item></class-item>
+                    <header-top tips="国货之光"></header-top>
+                    <class-item ></class-item>
                 </mt-tab-container-item>
                 <mt-tab-container-item id="discuss">
+                    <header-top tips="分享你的护肤心得"></header-top>
                     论坛
                 </mt-tab-container-item>
                  <mt-tab-container-item id="mine">
+                     <header-top tips="朋友"></header-top>
                     我的
                 </mt-tab-container-item>
             </mt-tab-container>
@@ -35,6 +38,7 @@
 <script>
 import Classify from './common/classify'
 import TabBarIcon from "./common/TabBarIcon.vue"
+import Header from './common/header'
 export default {
      data(){
         return {
@@ -46,13 +50,13 @@ export default {
                 {isSelect:false},
                 {isSelect:false},
             ],
-
         }
     },
      components:{
         "class-item":Classify,
         "tabbaricon":TabBarIcon,
-        
+        "header-top":Header
+   
     },
       methods: {
         mysearch(){

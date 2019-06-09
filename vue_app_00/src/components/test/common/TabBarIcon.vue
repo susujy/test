@@ -1,4 +1,5 @@
 <!--TabBarIcon.vue-->
+<!--下面选中变色的图片-->
 <template>
     <div>
         <img :src="focused?selectedImage:normalImage" alt="" class="imgstyle">
