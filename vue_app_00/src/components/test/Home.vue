@@ -10,8 +10,8 @@
                     <class-item ></class-item>
                 </mt-tab-container-item>
                 <mt-tab-container-item id="discuss">
-                    <header-top tips="分享你的护肤心得"></header-top>
-                    论坛
+                    <header-top tips="来种草大家的护肤心得"></header-top>
+                    <comment></comment>
                 </mt-tab-container-item>
                  <mt-tab-container-item id="mine">
                      <header-top tips="朋友"></header-top>
@@ -39,6 +39,7 @@
 import Classify from './common/classify'
 import TabBarIcon from "./common/TabBarIcon.vue"
 import Header from './common/header'
+import comment from './common/comment'
 export default {
      data(){
         return {
@@ -55,8 +56,8 @@ export default {
      components:{
         "class-item":Classify,
         "tabbaricon":TabBarIcon,
-        "header-top":Header
-   
+        "header-top":Header,
+        "comment":comment
     },
       methods: {
         mysearch(){
