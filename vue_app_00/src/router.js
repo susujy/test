@@ -5,6 +5,8 @@ import Home from './components/test/Home'
 import Header from './components/test/common/header.vue'
 // 引入登录页面
 import login from './components/test/login'
+//引入我的页面
+import Me from './components/test/common/Me.vue'
 
 Vue.use(Router)
 
@@ -13,10 +15,12 @@ export default new Router({
     // 美妆测评主页面
     {path:'/',component:Home},
     {path:"/header",component:Header},
-    {path:'/login',component:login}
+    {path:'/login',component:login},
     // // 评论页面
     // {path:"/comment",component:comment},
     // // 分类子组件
     // {path:"/classify",component:classify}
+    //我的页面
+    {path:'/me',component:Me}
   ]
 })
