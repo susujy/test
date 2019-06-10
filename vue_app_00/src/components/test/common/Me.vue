@@ -1,8 +1,8 @@
 <template>
-    <div id="">
+    <div class="page-head">
         <div class="contain">
             <div class="set">
-
+                <i class="iconfont icon-kefu"></i>
             </div>
             <div class="head">
                 <div class="headImg">
@@ -35,60 +35,26 @@
                     <p>收藏</p>
                 </div>
                 <div>
-                    <i></i>
+                    <i class="iconfont icon-bofang"></i>
                     <p>心得</p>
                 </div>
                 <div>
-                    <i></i>
+                    <i class="iconfont icon-bofang"></i>
                     <p>帖子</p>
                 </div>
                 <div>
-                    <i></i>
+                    <i class="iconfont icon-bofang"></i>
                     <p>消息</p>
                 </div>
             </div>
         </div>
-    
-    <mt-tab-container v-model="active" class="page-tabbar-container">
-    <mt-tab-container-item id="tab1">
-        <mt-cell class="icon" >
-            <i class="iconfont icon-kefu">
-                <span style="margin-left:10px">福利社</span>
-            </i>
-            <i class="iconfont icon-kefu"></i>        
-        </mt-cell>
-        <mt-cell >
-            <i class="iconfont icon-kefu">
-                <span>试用中心</span>
-            </i>
-            <i></i>
-        </mt-cell>
-        <mt-cell>
-            <i class="iconfont icon-kefu">
-                <span>我的订单</span>
-            </i>
-            <i></i>
-        </mt-cell>
-        <mt-cell>
-            <i class="iconfont icon-kefu">
-                <span>我的地址</span>
-            </i>
-            <i></i>
-        </mt-cell>
-        <mt-cell>
-            <i class="iconfont icon-kefu">
-                <span>兑换码/邀请码</span>
-            </i>
-            <i></i>
-        </mt-cell>
-        <mt-cell>
-            <i class="iconfont icon-kefu">
-                <span>意见反馈</span>
-            </i>
-            <i></i>
-        </mt-cell>
-    </mt-tab-container-item>
-</mt-tab-container>
+        <div style="height:300px"></div>
+        <mt-tab-container v-model="active" class="page-tabbar-container">
+            <mt-tab-container-item id="tab1">
+                <setting></setting>
+            </mt-tab-container-item>
+        </mt-tab-container>
+        
     </div>
 </template>
 <script>
@@ -97,22 +63,31 @@ import Setting from './Setting.vue'
 export default {
     data(){
         return {
-            active:"tab1"
+            active:"tab1",
+            list1:[],
+            list2:[{},{},{}]
+        
         }
     },
     components:{
         "setting":Setting
     }
 }
-</script>
+</script >
 <style scoped>
 .contain{
+    position:fixed;
+    z-index: 999;
+    width:100%;
     height:300px;
     padding-left:25px;
     padding-right:25px;
     background-color:pink;
 }
+.set{
+    text-align:right;margin:15px;
 
+}
 .headImg{
     background-color:#fff;
     border-radius:50%;
@@ -160,10 +135,7 @@ export default {
     justify-content:space-around;
     align-items:center;
     border-radius:10px;
-    /* box-shadow:; */
+    box-shadow:0px 2px 10px 1px #aaa; 
 }
-.icon{
-    display:flex;
-    justify-content: space-around
-}
+
 </style>

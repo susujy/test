@@ -9,6 +9,7 @@
      /* padding-top:40px; */
      padding-bottom:50px;
      overflow-x:hidden;
+     background-color:#fff;
    }
 
 .mui-bar-tab .mui-tab-item-tao.mui-active {
