@@ -10,6 +10,7 @@ import'mint-ui/lib/style.css'
 //3.将mint-ui组件库中组件注册到vue实例中
 Vue.use(MintUI);
 import './font/iconfont.css'
+import './font_me/iconfont.css'
 //4.引入axios.js
 import axios from "./axios"
 

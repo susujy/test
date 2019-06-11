@@ -14,8 +14,7 @@
                     <comment></comment>
                 </mt-tab-container-item>
                  <mt-tab-container-item id="mine">
-                     <header-top tips="朋友"></header-top>
-                    我的
+                     <me></me>
                 </mt-tab-container-item>
             </mt-tab-container>
             <!-- 4.tabbar列表 -->
@@ -40,6 +39,7 @@ import Classify from './common/classify'
 import TabBarIcon from "./common/TabBarIcon.vue"
 import Header from './common/header'
 import comment from './common/comment'
+import Me from './common/Me.vue'
 export default {
      data(){
         return {
@@ -57,7 +57,8 @@ export default {
         "class-item":Classify,
         "tabbaricon":TabBarIcon,
         "header-top":Header,
-        "comment":comment
+        "comment":comment,
+        "me":Me
     },
       methods: {
         mysearch(){
