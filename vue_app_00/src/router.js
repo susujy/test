@@ -7,7 +7,8 @@ import Header from './components/test/common/header.vue'
 import login from './components/test/login'
 //引入我的页面
 import Me from './components/test/common/Me.vue'
-
+//开封
+import Using from './components/test/common/Using.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -21,6 +22,8 @@ export default new Router({
     // // 分类子组件
     // {path:"/classify",component:classify}
     //我的页面
-    {path:'/me',component:Me}
+    {path:'/me',component:Me},
+    //开封
+    {path:'/using',component:Using}
   ]
 })
