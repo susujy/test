@@ -4,14 +4,14 @@
             <mt-tab-container class="page-tabbar-container" v-model="active">
                 <mt-tab-container-item id="message">
                     <header-top   tips="阿玛尼"></header-top>
+                    <banner></banner>
                 </mt-tab-container-item>
                 <mt-tab-container-item id="contact">
-                    <header-top tips="国货之光"></header-top>
+                    <header-top tips="洗面奶推荐"></header-top>
                     <class-item ></class-item>
                 </mt-tab-container-item>
-                <mt-tab-container-item id="discuss">
-                    <header-top tips="来种草大家的护肤心得"></header-top>
-                    <comment></comment>
+                <mt-tab-container-item id="discuss">   
+
                 </mt-tab-container-item>
                  <mt-tab-container-item id="mine">
                      <me></me>
@@ -26,7 +26,7 @@
                     <tabbaricon :selectedImage="require('../../assets/cao(1).png')" :normalImage="require('../../assets/cao.png')" :focused="currentIndex[1].isSelect" ></tabbaricon>产品
                 </mt-tab-item>
                 <mt-tab-item id="discuss" @click.native="changeState(2)">
-                    <tabbaricon :selectedImage="require('../../assets/pingjia(1).png')" :normalImage="require('../../assets/pingjia.png')" :focused="currentIndex[2].isSelect" ></tabbaricon>论坛
+                    <tabbaricon :selectedImage="require('../../assets/pingjia(1).png')" :normalImage="require('../../assets/pingjia.png')" :focused="currentIndex[2].isSelect" ></tabbaricon>消息
                 </mt-tab-item>
                 <mt-tab-item id="mine" @click.native="changeState(3)">
                     <tabbaricon :selectedImage="require('../../assets/mine(1).png')" :normalImage="require('../../assets/mine.png')" :focused="currentIndex[3].isSelect" ></tabbaricon>我的
@@ -38,8 +38,9 @@
 import Classify from './common/classify'
 import TabBarIcon from "./common/TabBarIcon.vue"
 import Header from './common/header'
-import comment from './common/comment'
 import Me from './common/Me.vue'
+import bar from './common/bar.vue'
+import banner from './common/banner'
 export default {
      data(){
         return {
@@ -57,8 +58,9 @@ export default {
         "class-item":Classify,
         "tabbaricon":TabBarIcon,
         "header-top":Header,
-        "comment":comment,
-        "me":Me
+        "me":Me,
+        "bar":bar,
+        "banner":banner
     },
       methods: {
         mysearch(){
@@ -91,4 +93,5 @@ export default {
    .mint-tabbar > .mint-tab-item{
        color:#666;
    }
+   
 </style>

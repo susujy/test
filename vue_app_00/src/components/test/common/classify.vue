@@ -1,76 +1,100 @@
 <template>
     <div id="box">
         <div id="list">
-            <div class="item">
-                <a href="">
-                    <img src="../../../assets/jiemianru.png" width="50px" height="50px">
+            <div class="item" @click="jumplist">
+                <a>
+                    <img src="../../../assets/1.jpg" width="50px" height="50px">
                     <span>洁面</span>
                 </a>
             </div>
             <div class="item">
-                <a href="">
-                    <img src="../../../assets/huazhuangshui.png" width="50px" height="50px">
+                <a >
+                    <img src="../../../assets/2.jpg" width="50px" height="50px">
                     <span>化妆水</span>
                 </a>
             </div>
             <div class="item">
                 <a href="">
-                    <img src="../../../assets/jinghualou.png" width="50px" height="50px">
+                    <img src="../../../assets/3.jpg" width="50px" height="50px">
                     <span>精华</span>
                 </a>
             </div>
             <div class="item">
                 <a href="">
-                    <img src="../../../assets/ruye.png" width="50px" height="50px">
+                    <img src="../../../assets/4.jpg" width="50px" height="50px">
                     <span>乳液</span>
                 </a>
             </div>
             <div class="item">
                 <a href="">
-                    <img src="../../../assets/mianshuang.png" width="50px" height="50px">
+                    <img src="../../../assets/5.jpg" width="50px" height="50px">
                     <span>面霜</span>
                 </a>
             </div>
             <div class="item">
                 <a href="">
-                    <img src="../../../assets/qidianfendi.png" width="50px" height="50px">
+                    <img src="../../../assets/6.jpg" width="50px" height="50px">
+                    <span>面膜</span>
+                </a>
+            </div>
+            <div class="item">
+                <a href="">
+                    <img src="../../../assets/7.jpg" width="50px" height="50px">
+                    <span>防晒</span>
+                </a>
+            </div>
+            <div class="item">
+                <a href="">
+                    <img src="../../../assets/8.jpg" width="50px" height="50px">
+                    <span>隔离</span>
+                </a>
+            </div>
+            <div class="item">
+                <a href="">
+                    <img src="../../../assets/9.jpg" width="50px" height="50px">
                     <span>粉底</span>
                 </a>
             </div>
             <div class="item">
                 <a href="">
-                    <img src="../../../assets/kouhong.png" width="50px" height="50px">
+                    <img src="../../../assets/10.jpg" width="50px" height="50px">
+                    <span>粉饼</span>
+                </a>
+            </div>
+            <div class="item">
+                <a href="">
+                    <img src="../../../assets/11.jpg" width="50px" height="50px">
+                    <span>遮瑕</span>
+                </a>
+            </div>
+            <div class="item">
+                <a href="">
+                    <img src="../../../assets/12.jpg" width="50px" height="50px">
                     <span>口红</span>
                 </a>
             </div>
             <div class="item">
                 <a href="">
-                    <img src="../../../assets/saihong.png" width="50px" height="50px">
-                    <span>腮红</span>
+                    <img src="../../../assets/13.jpg" width="50px" height="50px">
+                    <span>卸妆</span>
                 </a>
             </div>
             <div class="item">
                 <a href="">
-                    <img src="../../../assets/yanyingpan.png" width="50px" height="50px">
-                    <span>眼影</span>
+                    <img src="../../../assets/14.jpg" width="50px" height="50px">
+                    <span>BB霜</span>
                 </a>
             </div>
             <div class="item">
                 <a href="">
-                    <img src="../../../assets/xiangshui.png" width="50px" height="50px">
-                    <span>香水</span>
+                    <img src="../../../assets/15.jpg" width="50px" height="50px">
+                    <span>CC霜</span>
                 </a>
             </div>
             <div class="item">
                 <a href="">
-                    <img src="../../../assets/huazhuangshua.png" width="50px" height="50px">
-                    <span>工具</span>
-                </a>
-            </div>
-            <div class="item">
-                <a href="">
-                    <img src="../../../assets/leimupinleifenleileibie1-copy.png" width="50px" height="50px">
-                    <span>其他</span>
+                    <img src="../../../assets/16.jpg" width="50px" height="50px">
+                    <span>面部护理</span>
                 </a>
             </div>
         </div>
@@ -80,6 +104,11 @@
 export default {
     data() {
         return {
+        }
+    },
+    methods: {
+        jumplist(){
+            this.$router.push("/Wash")
         }
     },
 }
@@ -106,7 +135,7 @@ export default {
          flex-direction: column;
          text-align:center;
          color:#000;
-         font-size:15px;
-         font-family:"楷体";
+         font-size:12px;
+         font-family:"微软雅黑";
      }
 </style>
