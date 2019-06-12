@@ -1,11 +1,11 @@
 <template>
     <div class="page-contain">
         <div class="page-head">
-            <div class="left">
+            <div class="left" @click="back">
                 <img src="../../../assets/left.png" alt="">
             </div>
             <span>开封</span>
-            <div class="sure">
+            <div class="sure" @click="sure">
                 <span>确定</span>        
             </div>
         </div>
@@ -26,16 +26,16 @@
                     <span>产品评星:</span>
                 </div>
                 <div class="sImg">
-                    <img src="../../../assets/xingxing.png" alt="">
-                    <img src="../../../assets/xingxing.png" alt="">
-                    <img src="../../../assets/xingxing.png" alt="">
+                    <img src="../../../assets/xingxing_1.png" alt="">
+                    <img src="../../../assets/xingxing_1.png" alt="">
+                    <img src="../../../assets/xingxing_1.png" alt="">
                     <img src="../../../assets/xingxing.png" alt="">
                     <img src="../../../assets/xingxing.png" alt="">
                 </div>
             </div>
             <div class="pDiv">
                 <div class="pText">
-                    <span>开封时间</span>
+                    <span>开封时间:</span>
                 </div>
                 <div class="pTime">
                     <span>2019.6.11</span>
@@ -43,7 +43,7 @@
             </div>
             <div class="pDiv">
                 <div class="pText">
-                    <span>开封保鲜期</span>
+                    <span>开封保鲜期:</span>
                 </div>
                 <div class="pTime">
                     <span>6个月</span>
@@ -51,7 +51,7 @@
             </div>
             <div class="pDiv">
                 <div class="pText">
-                    <span>保鲜期结束提前提醒</span>
+                    <span>保鲜期结束提前提醒:</span>
                 </div>
                 <div class="pTime">
                     <span>1个月</span>
@@ -59,15 +59,16 @@
             </div>
             <div class="pDiv">
                 <div class="pText">
-                    <span>购买时间</span>
+                    <span>购买时间:</span>
                 </div>
                 <div class="pTime">
                     <span>2019.6.11</span>
+                    <!-- <input class="pInput" type="date"> -->
                 </div>
             </div>
             <div class="pDiv">
                 <div class="pText">
-                    <span>购买价格</span>
+                    <span>购买价格:</span>
                 </div>
                 <div class="price">
                     <input class="pInput" type="text" value="150.0">
@@ -75,7 +76,7 @@
             </div>
             <div class="pDiv">
                 <div class="pText">
-                    <span>购买渠道</span>
+                    <span>购买渠道:</span>
                 </div>
                 <div class="way">
                     <input class="pInput" type="text" placeholder="请选择渠道(选填)">
@@ -93,6 +94,15 @@
 export default {
     data(){
         return {}
+    },
+    methods:{
+        back(){
+            this.$router.push("/");
+        },
+        sure(){
+            this.$router.push("/");
+            this.$toast("开封成功")
+        }
     }
 }
 </script>
@@ -116,6 +126,7 @@ export default {
 }
 .sure{
     margin-right:15px;
+    color:#ffa599;
 }
 .left img{width:25px;}
 /*产品图片样式*/ 
@@ -153,6 +164,7 @@ color:#000;
 }
 .share span{
     font-size:12px;
+    color:#ffa599;
 }
 .pInput{
     border:none;

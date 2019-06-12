@@ -88,7 +88,7 @@ span,p{font-family:"微软雅黑";font-weight:light}
     height:300px;
     padding-left:25px;
     padding-right:25px;
-    background-color:hotpink;
+    background-color:#ffa599;
 }
 .set{
     text-align:right;
@@ -149,7 +149,7 @@ span,p{font-family:"微软雅黑";font-weight:light}
     justify-content:space-around;
     align-items:center;
     border-radius:10px;
-    box-shadow:0px 2px 10px 1px #aaa; 
+    box-shadow:3px 3px 10px 1px #aaa; 
 }
 .like p{color:#000;margin-top:5px;}
 .like div{text-align:center;}
