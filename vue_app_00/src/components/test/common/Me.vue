@@ -154,10 +154,10 @@ span,p{font-family:"微软雅黑";font-weight:light}
 .like p{color:#000;margin-top:5px;}
 .like div{text-align:center;}
 /*修改icon的颜色*/ 
-.iconfont{font-size:20px;}
+.iconfont{font-size:24px;}
 .icon-shezhi1{color:#fff;}
 .icon-shoucangdetiezi{color:goldenrod}
-.icon-aixin{color:deeppink;font-size:24px;}
+.icon-aixin{color:deeppink;}
 .icon-wodetiezi{color:rgb(243, 50, 50);}
-.icon-xiaoxi-shixin{color:rgb(91, 194, 241);font-size:24px;}
+.icon-xiaoxi-shixin{color:rgb(91, 194, 241);font-size:22px;}
 </style>
