@@ -103,14 +103,14 @@ div.contanier{
     width:20px;
     height:20px;
     position: absolute;
-    top:327px;
+    top:308px;
     left:70px;
 }
 .imgkf{
     width:30px;
     height:30px;
     position: absolute;
-    top:321px;
+    top:300px;
     left:233px;
 }
 </style>
