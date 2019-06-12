@@ -79,6 +79,6 @@ export default {
 .icon-dingdan2{color:orange;}
 .icon-test{color:rgb(12, 185, 12)}
 .icon-yaoqinghaoyou{color:rgb(95, 194, 240);}
-.icon-xinfeng1{color:rgb(248, 112, 70);font-size:18px;}
+.icon-xinfeng1{color:rgb(248, 112, 70);font-size:20px;}
 
 </style>
