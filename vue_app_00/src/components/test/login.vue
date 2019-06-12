@@ -71,10 +71,9 @@ export default {
 			//1.获取用户输入用户名   3~10
 			var n= this.uname
 			var p= this.upass
-			console.log(n,p)
 			//3.创建两个正则表达式
 			var nreg=/^1(3|4|5|6|7|8|9)\d{9}$/ig
-			var preg=/^[a-zA-Z0-9]{3,8}$/ig
+			var preg=/^\d{6}$/ig
 			//4.判断用户名格式不正确 提示出错
 			if(!nreg.test(n)){
 			this.$toast("手机号码格式错误");
@@ -82,13 +81,15 @@ export default {
 			}
 			//5.判断密码格式不正确   提示出错
 			else if(!preg.test(p)){
-			this.$toast("密码格式错误")
+			this.$toast("验证码格式错误")
 			return;
 			}
 			//6.将用户名和密码发送   ajax请求
 			//7.并且获取服务器返回结果
 			//8.返回失败            提示
 			//9.返回成功 
+			//登录成功跳转主页面
+			this.$router.push({path:'/'})
 		}
 	}
 }
