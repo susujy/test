@@ -11,8 +11,8 @@ import Me from './components/test/common/Me.vue'
 import product from './components/test/product.vue'
 import banner from './components/test/common/banner'
 import Using from './components/test/common/Using.vue'
-// import wash from './components/test/Wash'
-// import FacewashList from './components/test/common/FacewashList'
+import Wash from './components/test/Wash'
+import FacewashList from './components/test/common/FacewashList'
 
 Vue.use(Router)
 
@@ -24,7 +24,6 @@ export default new Router({
     {path:'/login',component:login},
     {path:"/product",component:product},
     {path:"/banner",component:banner},
-    // {path:'/wash',component:wash},
 
     // {path:'/bar',component:bar},
     // // 评论页面
@@ -34,6 +33,8 @@ export default new Router({
     //我的页面
     {path:'/me',component:Me},
     //开封
-    {path:'/using',component:Using}
+    {path:'/using',component:Using},
+    {path:'/Wash',component:Wash},
+    {path:'/FacewashList',component:FacewashList}
   ]
 })

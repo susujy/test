@@ -17,7 +17,7 @@
 </template>
 <script>
 //负责引入Message子组件
-// import  Facewash from "./Facewash"
+import  Facewash from "./Facewash"
 //负责引入json文件
 // import listjson from "../json/facewashlist.json"
 export default {

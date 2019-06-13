@@ -11,7 +11,7 @@
                     <class-item ></class-item>
                 </mt-tab-container-item>
                 <mt-tab-container-item id="discuss">   
-
+                    <message></message>
                 </mt-tab-container-item>
                  <mt-tab-container-item id="mine">
                      <me></me>
@@ -41,6 +41,7 @@ import Header from './common/header'
 import Me from './common/Me.vue'
 import bar from './common/bar.vue'
 import banner from './common/banner'
+import message from './common/message'
 export default {
      data(){
         return {
@@ -60,7 +61,9 @@ export default {
         "header-top":Header,
         "me":Me,
         "bar":bar,
-        "banner":banner
+        "banner":banner,
+        "message":message,
+        
     },
       methods: {
         mysearch(){
