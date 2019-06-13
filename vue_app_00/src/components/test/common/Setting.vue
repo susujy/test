@@ -75,7 +75,7 @@ export default {
 /*修改图标的颜色大小*/ 
  .iconfont{font-size:24px;} 
 .icon-fulishe{color:rgba(183, 155, 240, 0.986)}
- .icon-dianzan{color:rgb(240, 140, 240);}/*font-size:26px */
+ .icon-dianzan{color:rgb(240, 140, 240);}
 .icon-dingdan2{color:orange;}
 .icon-test{color:rgb(12, 185, 12)}
 .icon-yaoqinghaoyou{color:rgb(95, 194, 240);}

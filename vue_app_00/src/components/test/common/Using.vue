@@ -61,10 +61,12 @@
                 <div class="pText">
                     <span>购买时间:</span>
                 </div>
-                <div class="pTime">
-                    <span>2019.6.11</span>
+                <div class="pTime" @click="buyTime">
+                    <span>{{dateText | formatDate}}</span>
                     <!-- <input class="pInput" type="date"> -->
                 </div>
+                <mt-datetime-picker :startDate="startdate" :endDate="enddate" @confirm="confirm" ref="picker" type="date" v-model="datetime">
+                </mt-datetime-picker>
             </div>
             <div class="pDiv">
                 <div class="pText">
@@ -92,8 +94,19 @@
 </template>
 <script>
 export default {
+    filters:{
+        
+            // this.formatDate(date)
+        
+    },
     data(){
-        return {}
+        return {
+            dateText:new Date().toLocaleDateString(),
+            datetime:"",
+            isClicked:false,
+            startdate:new Date(2017,0,1),
+            enddate:new Date()
+        }
     },
     methods:{
         back(){
@@ -102,6 +115,21 @@ export default {
         sure(){
             this.$router.push("/");
             this.$toast("开封成功")
+        },
+        buyTime(){
+            this.datetime=this.dateText;
+            this.$refs.picker.open();
+        },
+        formatDate(date) {
+            var y = date.getFullYear()
+            var m = date.getMonth() + 1
+            m = m < 10 ? '0' + m : m
+            var d = date.getDate()
+            d = d < 10 ? ('0' + d) : d
+            return y + '.' + m + '.' + d
+        },
+        confirm(val){
+            this.dateText=this.formatDate(val)
         }
     }
 }
