@@ -67,8 +67,10 @@ export default {
   height: 100%!important;
 }
 .mint-swipe-item img {
-  width: 100%;
+  width: 97%;
   height: 100%;
-  margin:5px 0px;
+  margin:3px 8px;
+  border-radius:12px;
+  box-shadow: 0px 0px 0px 0px pink;
 }
 </style>
