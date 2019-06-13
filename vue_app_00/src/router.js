@@ -11,6 +11,7 @@ import Me from './components/test/common/Me.vue'
 import product from './components/test/product.vue'
 import banner from './components/test/common/banner'
 import Using from './components/test/common/Using.vue'
+import goods from './components/test/goods'
 // import wash from './components/test/Wash'
 // import FacewashList from './components/test/common/FacewashList'
 
@@ -24,6 +25,7 @@ export default new Router({
     {path:'/login',component:login},
     {path:"/product",component:product},
     {path:"/banner",component:banner},
+    {path:"/goods",component:goods},
     // {path:'/wash',component:wash},
 
     // {path:'/bar',component:bar},
