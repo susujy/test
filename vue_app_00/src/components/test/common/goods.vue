@@ -38,10 +38,6 @@
 			transition: .3s;
 		}
 		
-		.cards {
-			/* float: left; */
-            
-		}
 		
 		.cards .tab-card {
 			display: none;
