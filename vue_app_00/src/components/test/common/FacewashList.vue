@@ -9,7 +9,7 @@
       :title="item.title"
       :comment="item.comment"
       :price="item.price"
-      :imgurl="require('../../../assets/a_7.png')"
+      :imgurl="require('../../../assets/i000044215_0_1_1_3.png')"
       :itemClick="clickitem"
      ></facewash>
      
@@ -17,7 +17,7 @@
 </template>
 <script>
 //负责引入Message子组件
-// import  Facewash from "./Facewash"
+import  Facewash from "./Facewash"
 //负责引入json文件
 // import listjson from "../json/facewashlist.json"
 export default {
@@ -112,7 +112,8 @@ export default {
   },
   methods: {
     clickitem(id){
-      console.log(id);
+       this.$router.push("/product");
+       console.log(id);
     }
   },
   components:{
