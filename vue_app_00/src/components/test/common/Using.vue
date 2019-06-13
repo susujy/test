@@ -62,8 +62,9 @@
                     <span>购买时间:</span>
                 </div>
                 <div class="pTime">
-                    <span>2019.6.11</span>
+                    <!-- <span>2019.6.11</span> -->
                     <!-- <input class="pInput" type="date"> -->
+                    <mt-datetime-picker ref="picker" type="date" v-model="pickerVisible"></mt-datetime-picker>
                 </div>
             </div>
             <div class="pDiv">
@@ -91,9 +92,17 @@
     </div>
 </template>
 <script>
+// import { DatetimePicker } from 'mint-ui';
+// Vue.component(DatetimePicker.name, DatetimePicker)
 export default {
     data(){
-        return {}
+        return {
+            value: new Date(),
+      startDate: new Date("1900/01/01"), //默认是当前时间前20年，手动设置日期，这样说据说是为了在兼容ios。（还没有验证）
+      endDate: new Date()
+    }
+
+        
     },
     methods:{
         back(){
@@ -102,7 +111,14 @@ export default {
         sure(){
             this.$router.push("/");
             this.$toast("开封成功")
+        },
+        openPicker(){
+            this.$refs.picker.open();
+        },
+        checkinCancel() {
+            this.$refs.picker.close();
         }
+
     }
 }
 </script>
