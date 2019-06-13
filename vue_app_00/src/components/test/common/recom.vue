@@ -2,20 +2,21 @@
     <div>
         <div id="list">
             <ul>
-                <li class="big" v-for="(l,i) in list" :key="i">
+                <li class="big"  v-for="(l,i) in list" :key="i">
                     <img :src="l.url" width="100%">
                     <p class="text">{{l.dec}}</p>
                 </li>
             </ul>
+            
         </div>
     </div>
 </template>
 <script>
-var li=document.querySelectorAll("LI");
-console.log(li);
+// console.log(data);
 export default {
     data() {
         return {
+      
             list:[{lid:1,url:require('../../../assets/list1.jpg'),dec:"韩国进口 JMsolution 玫瑰粉色防晒棒 全身水润防晒霜防晒棒 spf50"},
             {lid:2,url:require('../../../assets/list2.jpg'),dec:"韩国 RECIPE莱斯壁水晶防晒喷雾50ml 小S同款SPF50+防紫外线防水防汗"},
             {lid:3,url:require('../../../assets/list3.jpg'),dec:"曼秀雷敦 （Mentholatum） 新碧轻透润色 防晒隔离乳SPF50+PA+++30g 提亮肤色清爽隔离持久 妆前打底不脱妆"},
@@ -23,6 +24,7 @@ export default {
         }
     },
 }
+// console.log(list)
 </script>
 <style scoped>
     /* div#list{
