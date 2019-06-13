@@ -13,6 +13,7 @@ import banner from './components/test/common/banner'
 import Using from './components/test/common/Using.vue'
 import Wash from './components/test/Wash'
 import FacewashList from './components/test/common/FacewashList'
+import recom from  './components/test/common/recom'
 
 Vue.use(Router)
 
@@ -24,6 +25,7 @@ export default new Router({
     {path:'/login',component:login},
     {path:"/product",component:product},
     {path:"/banner",component:banner},
+    {path:"/recom",component:recom},
 
     // {path:'/bar',component:bar},
     // // 评论页面

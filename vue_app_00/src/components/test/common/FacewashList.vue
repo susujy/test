@@ -9,7 +9,7 @@
       :title="item.title"
       :comment="item.comment"
       :price="item.price"
-      :imgurl="require('../../../assets/a_7.png')"
+      :imgurl="require('../../../assets/i000044215_0_1_1_3.png')"
       :itemClick="clickitem"
      ></facewash>
      
@@ -112,7 +112,8 @@ export default {
   },
   methods: {
     clickitem(id){
-      console.log(id);
+       this.$router.push("/product");
+       console.log(id);
     }
   },
   components:{
