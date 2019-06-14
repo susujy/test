@@ -10,6 +10,10 @@
                 <mt-tab-container-item id="contact">
                     <header-top tips="洗面奶推荐"></header-top>
                     <class-item ></class-item>
+                    <!-- <orderlist></orderlist> -->
+                    <div id="image" @click="jumpclass">
+                        <img src="../../assets/class2.jpg" alt=""  width="80%">
+                    </div>
                 </mt-tab-container-item>
                 <mt-tab-container-item id="discuss">   
                     <message></message>
@@ -44,6 +48,7 @@ import bar from './common/bar.vue'
 import banner from './common/banner'
 import message from './common/message'
 import goods from './common/goods'
+import orderlist from './common/orderlist'
 export default {
      data(){
         return {
@@ -66,6 +71,7 @@ export default {
         "banner":banner,
         "message":message,
         "goods":goods,
+        "orderlist":orderlist
         
     },
       methods: {
@@ -74,6 +80,9 @@ export default {
         },
         myadd(){
             console.log("+");
+        },
+        jumpclass(){
+            this.$router.push("/orderlist");
         },
         changeState(n){
             //函数功能：将当前参数下标对应数组值修改为true其他修改为false
@@ -99,6 +108,9 @@ export default {
    }
    .mint-tabbar > .mint-tab-item{
        color:#666;
+   }
+   #image{
+       text-align: center;
    }
    
 </style>

@@ -16,7 +16,7 @@ import Using from './components/test/common/Using.vue'
 // import FacewashList from './components/test/common/FacewashList'
 import Wash from './components/test/Wash'
 import FacewashList from './components/test/common/FacewashList'
-// import recom from  './components/test/common/recom'
+import orderlist from  './components/test/common/orderlist'
 
 Vue.use(Router)
 
@@ -30,7 +30,7 @@ export default new Router({
     // {path:"/banner",component:banner},
     // {path:"/goods",component:goods},
     // {path:'/wash',component:wash},
-    // {path:"/recom",component:recom},
+    {path:"/orderlist",component:orderlists},
 
     // {path:'/bar',component:bar},
     // // 评论页面
