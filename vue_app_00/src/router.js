@@ -28,7 +28,7 @@ export default new Router({
     {path:'/login',component:login},
     {path:"/product",component:product},
     // {path:"/banner",component:banner},
-    {path:"/goods",component:goods},
+    // {path:"/goods",component:goods},
     // {path:'/wash',component:wash},
     // {path:"/recom",component:recom},
 
