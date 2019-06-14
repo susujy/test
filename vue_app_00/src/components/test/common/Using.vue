@@ -63,7 +63,10 @@
                 </div>
                 <div class="pTime" @click="buyTime">
                     <span>{{dateText | formatDate}}</span>
+                <div class="pTime">
+                    <!-- <span>2019.6.11</span> -->
                     <!-- <input class="pInput" type="date"> -->
+                    <mt-datetime-picker ref="picker" type="date" v-model="pickerVisible"></mt-datetime-picker>
                 </div>
                 <mt-datetime-picker :startDate="startdate" :endDate="enddate" @confirm="confirm" ref="picker" type="date" v-model="datetime">
                 </mt-datetime-picker>
@@ -95,15 +98,20 @@
 <script>
 export default {
     filters:{
-        
-            // this.formatDate(date)
+            formatDate(time) {
+            var y = date.getFullYear()
+            var m = date.getMonth() + 1
+            m = m < 10 ? ('0' + m) : m
+            var d = date.getDate()
+            d = d < 10 ? ('0' + d) : d
+            return y + '.' + m + '.' + d
+        }
         
     },
     data(){
         return {
             dateText:new Date().toLocaleDateString(),
             datetime:"",
-            isClicked:false,
             startdate:new Date(2017,0,1),
             enddate:new Date()
         }
@@ -120,17 +128,11 @@ export default {
             this.datetime=this.dateText;
             this.$refs.picker.open();
         },
-        formatDate(date) {
-            var y = date.getFullYear()
-            var m = date.getMonth() + 1
-            m = m < 10 ? '0' + m : m
-            var d = date.getDate()
-            d = d < 10 ? ('0' + d) : d
-            return y + '.' + m + '.' + d
-        },
-        confirm(val){
-            this.dateText=this.formatDate(val)
+        
+        confirm(){
+            this.dateText=this.datetime
         }
+
     }
 }
 </script>

@@ -7,8 +7,14 @@ import Header from './components/test/common/header.vue'
 import login from './components/test/login'
 //引入我的页面
 import Me from './components/test/common/Me.vue'
-//开封
+// 商品详情页面
+import product from './components/test/product.vue'
+import banner from './components/test/common/banner'
 import Using from './components/test/common/Using.vue'
+import Wash from './components/test/Wash'
+import FacewashList from './components/test/common/FacewashList'
+import recom from  './components/test/common/recom'
+
 Vue.use(Router)
 
 export default new Router({
@@ -17,6 +23,11 @@ export default new Router({
     {path:'/',component:Home},
     {path:"/header",component:Header},
     {path:'/login',component:login},
+    {path:"/product",component:product},
+    {path:"/banner",component:banner},
+    {path:"/recom",component:recom},
+
+    // {path:'/bar',component:bar},
     // // 评论页面
     // {path:"/comment",component:comment},
     // // 分类子组件
@@ -24,6 +35,8 @@ export default new Router({
     //我的页面
     {path:'/me',component:Me},
     //开封
-    {path:'/using',component:Using}
+    {path:'/using',component:Using},
+    {path:'/Wash',component:Wash},
+    {path:'/FacewashList',component:FacewashList}
   ]
 })
