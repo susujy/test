@@ -33,49 +33,75 @@
                     <img src="../../../assets/xingxing.png" alt="">
                 </div>
             </div>
-            <div class="pDiv">
+            <div class="pDiv" @click="openPicker">
                 <div class="pText">
                     <span>开封时间:</span>
                 </div>
                 <div class="pTime">
-                    <span>2019.6.11</span>
+                    <!-- <span>2019.6.11</span> -->
+                    <span>{{this.opendate | formatDate}}</span>
                 </div>
             </div>
-            <div class="pDiv">
+            <mt-datetime-picker 
+                ref="openpicker" type="date" 
+                :startDate="startdate" 
+                :endDate="enddate"  
+                v-model="opendatetime" 
+                @confirm="openConfirm">
+            </mt-datetime-picker>
+            <div class="pDiv" @click="fshowPup">
                 <div class="pText">
                     <span>开封保鲜期:</span>
                 </div>
                 <div class="pTime">
-                    <span>6个月</span>
-                    <mt-picker :slots="slots" ></mt-picker>
+                    <!-- <span>6个月</span> -->
+                    <span>{{fmsg}}</span>
                 </div>
             </div>
-            <div class="pDiv">
+            <mt-popup v-model="fpopupVisible" popup-transition="popup-fade" choseOnClickModal="true" position="bottom">
+                <mt-picker :slots="fslots" @change="fonValuesChange" style="width:375px;" showToolbar >
+                   <div class="picker-toolbar-title">
+                        <div class="usi-btn-cancel" @click="fpopupVisible=!fpopupVisible">取消                         </div> 
+                        <div class="">选择时间</div>
+                        <div class="usi-btn-sure" @click="fpopupVisible=!fpopupVisible">确定                           </div>
+                  </div>
+                </mt-picker>
+            </mt-popup>
+            <div class="pDiv" @click="rshowPup">
                 <div class="pText">
                     <span>保鲜期结束提前提醒:</span>
                 </div>
                 <div class="pTime">
-                    <span>1个月</span>
+                    <!-- <span>1个月</span> -->
+                    <span>{{rmsg}}</span>
                 </div>
             </div>
-            <div class="pDiv" @click="openPicker" @touchmove.prevent>
+            <mt-popup v-model="rpopupVisible" popup-transition="popup-fade" choseOnClickModal="true" position="bottom">
+                <mt-picker :slots="rslots" @change="ronValuesChange" style="width:375px;" showToolbar >
+                   <div class="picker-toolbar-title">
+                        <div class="usi-btn-cancel" @click="rpopupVisible=!rpopupVisible">取消                         </div> 
+                        <div class="">选择时间</div>
+                        <div class="usi-btn-sure" @click="rpopupVisible=!rpopupVisible">确定                           </div>
+                  </div>
+                </mt-picker>
+             </mt-popup>
+             <div class="pDiv"  @click="buyPicker"><!-- @touchmove.prevent -->
                 <div class="pText">
                     <span>购买时间:</span>
                 </div>
                 <div class="pTime" >
-                    <span>{{dateText | formatDate}}</span>
+                    <span>{{this.buydate | formatDate}}</span>
+                    <!-- <span>{{dateText}}</span> -->
                     <!-- <input class="pInput" type="date"> -->
-                <mt-datetime-picker 
-                ref="picker" type="date" 
+                </div>
+            </div>
+            <mt-datetime-picker 
+                ref="buypicker" type="date" 
                 :startDate="startdate" 
                 :endDate="enddate"  
-                v-model="datetime" 
-                @cancel="checkinCancel"   
-                @confirm="handleConfirm">
-                </mt-datetime-picker>
-                </div>
-                
-            </div>
+                v-model="buydatetime" 
+                @confirm="buyConfirm">
+            </mt-datetime-picker>
             <div class="pDiv">
                 <div class="pText">
                     <span>购买价格:</span>
@@ -84,14 +110,24 @@
                     <input class="pInput" type="text" value="150.0">
                 </div>
             </div>
-            <div class="pDiv">
+            <div class="pDiv" @click="wshowPup">
                 <div class="pText">
                     <span>购买渠道:</span>
                 </div>
                 <div class="way">
-                    <input class="pInput" type="text" placeholder="请选择渠道(选填)">
+                    <input class="pInput" type="text" displayed placeholder="请选择渠道(选填)" v-model="wmsg">
+                    <!-- <span>{{message}}</span> -->
                 </div>
             </div>
+            <mt-popup v-model="wpopupVisible" popup-transition="popup-fade" choseOnClickModal="true" position="bottom">
+                <mt-picker :slots="wslots" @change="wonValuesChange" style="width:375px;" showToolbar>
+                   <div class="picker-toolbar-title">
+                        <div class="usi-btn-cancel" @click="wpopupVisible=!wpopupVisible">取消                         </div> 
+                        <div class="">请选择购买渠道</div>
+                        <div class="usi-btn-sure" @click="wpopupVisible=!wpopupVisible">确定                           </div>
+                  </div>
+                </mt-picker>
+            </mt-popup>
             <div class="share">
                 <span>分享你的使用感受吧</span>
             </div>
@@ -115,32 +151,97 @@ export default {
     },
     data(){
         return {
-            dateText:new Date().toLocaleDateString(),
-            datetime:"",
+            opendate:new Date().toLocaleDateString(),
+            buydate:new Date().toLocaleDateString(),
+            opendatetime:"",
+            buydatetime:"",
             startdate:new Date(2017,0,1), 
             enddate: new Date(),
-            slots:{values:["1个月","2个月","3个月","4个月","5个月","6个月"]}
+            showToolbar: true,
+            fmsg:"",
+            rmsg:"",
+            wmsg:"",
+            fslots:[{values:["1个月","2个月","3个月","4个月","5个月","6个月","7个月","8个月","9个月","10个月","11个月","12个月"]}],
+            rslots:[{values:["1个月","2个月","3个月","4个月","5个月","6个月"]}],
+            wslots:[{values:["专柜","天猫","淘宝","京东","美星家","海外代购","其他"]}],
+            fpopupVisible: false,
+            rpopupVisible: false,
+            wpopupVisible: false
+            
         }
     },
     methods:{
         back(){
-            this.$router.push("/");
+            this.$router.push("/product");
         },
         sure(){
-            this.$router.push("/");
-            this.$toast("开封成功")
-        },
-        openPicker(){
-            this.datetime=this.dateText;
-            this.$refs.picker.open();
+            this.$indicator.open({
+                text:"评分上传中...",
+                spinnerType: 'snake'
+            })
+            setTimeout(()=>{
+               this.$indicator.close();
+                this.$router.push("/product");
+                this.$toast({
+                    message:"开封成功",
+                    className:"toastStyle"
+                })
+            },1000)
             
         },
-        checkinCancel() {
-            this.$refs.picker.close();
+        openPicker(){
+            this.opendatetime=this.opendate;
+            this.$refs.openpicker.open();
         },
-        handleConfirm(){
-            this.dateText=this.datetime 
-        }
+        buyPicker(){
+            this.buydatetime=this.buydate;
+            this.$refs.buypicker.open();
+        },
+        openConfirm(){
+            this.opendate=this.opendatetime;
+        },
+        buyConfirm(){
+            this.buydate=this.buydatetime;
+        },
+        fshowPup() {
+            this.fpopupVisible = true
+        },
+        rshowPup() {
+            this.rpopupVisible = true
+        },
+        wshowPup() {
+            this.wpopupVisible = true
+        },
+        fonValuesChange(picker, values) {
+            if(!this.fpopupVisible){
+                this.fmsg="6个月";
+            }else{
+                this.fmsg= values[0];
+            }
+            if(values[0] > values[1]) {
+                picker.setSlotValue(1, values[0]);
+            }
+         },
+        ronValuesChange(picker, values) {
+            if(!this.rpopupVisible){
+                this.rmsg="1个月";
+            }else{
+                this.rmsg = values[0];
+            }
+            if(values[0] > values[1]) {
+                picker.setSlotValue(1, values[0]);
+            }
+         },
+        wonValuesChange(picker, values) {
+            if(!this.wpopupVisible){
+                this.wmsg="";
+            }else{
+                this.wmsg = values[0];
+            }
+            if(values[0] > values[1]) {
+                picker.setSlotValue(1, values[0]);
+            }
+         }
 
     }
 }
@@ -165,7 +266,7 @@ export default {
 }
 .sure{
     margin-right:15px;
-    color:#ffa599;
+    color:#fea3cc;
 }
 .left img{width:25px;}
 /*产品图片样式*/ 
@@ -199,11 +300,11 @@ color:#000;
 .share{
     height:80px;
     text-align:center;
-    padding-top:50px;
+    padding-top:70px;
 }
 .share span{
     font-size:12px;
-    color:#ffa599;
+    color:#fea3cc;
 }
 .pInput{
     border:none;
@@ -212,5 +313,25 @@ color:#000;
     padding-right:0;
     font-size:14px;
     text-align:right;
+}
+.way{font-size:14px;}
+.picker-toolbar-title{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    height:40px;
+    line-height:40px;
+    font-size:16px;
+}
+.usi-btn-cancel{
+    color:#aaa
+}
+.usi-btn-sure{
+    color:#fea3cc;
+}
+.toastStyle{
+    color:#fff !important;
+    background-color:#fea3cc !important;
+    font-size:14px;
 }
 </style>
