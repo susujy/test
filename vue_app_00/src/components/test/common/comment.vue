@@ -99,7 +99,7 @@ div.date{
 
 }  
 .mint-button--default {
-    background-color:#ffa599;
+    background-color:#f1a3cc;
     color:#fff;
 
 }
