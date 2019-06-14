@@ -95,7 +95,7 @@ export default {
 <style scoped>
    .mint-tabbar > .mint-tab-item.is-selected {
     background-color: #fff!important;
-    color: #ffa599;
+    color: #fea3cc;
    }
    .mint-tabbar > .mint-tab-item{
        color:#666;

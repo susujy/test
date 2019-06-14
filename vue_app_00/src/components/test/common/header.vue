@@ -5,7 +5,7 @@
             <input type="text" :placeholder="tips" >
         </div>
         <div class="logo">
-            <img src="../../../assets/xiaocao.png" alt="" width="30px" height="30px">
+            <img src="../../../assets/gd.png" alt="" width="30px" height="30px">
         </div>
     </div>
 </template>
@@ -33,7 +33,7 @@ export default {
     div.search{
         height:44px;
         line-height:44px;
-        border:1px solid #ffa599;
+        border:1px solid #fea3cc;
         border-radius:20px;
         text-align: center;
         margin-left:10px;
