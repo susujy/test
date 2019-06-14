@@ -5,6 +5,7 @@
                 <mt-tab-container-item id="message">
                     <header-top   tips="阿玛尼"></header-top>
                     <banner></banner>
+                    <goods></goods>
                 </mt-tab-container-item>
                 <mt-tab-container-item id="contact">
                     <header-top tips="洗面奶推荐"></header-top>
@@ -42,6 +43,7 @@ import Me from './common/Me.vue'
 import bar from './common/bar.vue'
 import banner from './common/banner'
 import message from './common/message'
+import goods from './common/goods'
 export default {
      data(){
         return {
@@ -63,6 +65,7 @@ export default {
         "bar":bar,
         "banner":banner,
         "message":message,
+        "goods":goods,
         
     },
       methods: {

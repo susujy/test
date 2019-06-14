@@ -47,6 +47,7 @@
                 </div>
                 <div class="pTime">
                     <span>6个月</span>
+                    <mt-picker :slots="slots" ></mt-picker>
                 </div>
             </div>
             <div class="pDiv">
@@ -57,19 +58,23 @@
                     <span>1个月</span>
                 </div>
             </div>
-            <div class="pDiv">
+            <div class="pDiv" @click="openPicker" @touchmove.prevent>
                 <div class="pText">
                     <span>购买时间:</span>
                 </div>
-                <div class="pTime" @click="buyTime">
+                <div class="pTime" >
                     <span>{{dateText | formatDate}}</span>
-                <div class="pTime">
-                    <!-- <span>2019.6.11</span> -->
                     <!-- <input class="pInput" type="date"> -->
-                    <mt-datetime-picker ref="picker" type="date" v-model="pickerVisible"></mt-datetime-picker>
-                </div>
-                <mt-datetime-picker :startDate="startdate" :endDate="enddate" @confirm="confirm" ref="picker" type="date" v-model="datetime">
+                <mt-datetime-picker 
+                ref="picker" type="date" 
+                :startDate="startdate" 
+                :endDate="enddate"  
+                v-model="datetime" 
+                @cancel="checkinCancel"   
+                @confirm="handleConfirm">
                 </mt-datetime-picker>
+                </div>
+                
             </div>
             <div class="pDiv">
                 <div class="pText">
@@ -98,22 +103,23 @@
 <script>
 export default {
     filters:{
-            formatDate(time) {
-            var y = date.getFullYear()
-            var m = date.getMonth() + 1
-            m = m < 10 ? ('0' + m) : m
-            var d = date.getDate()
-            d = d < 10 ? ('0' + d) : d
-            return y + '.' + m + '.' + d
+        formatDate(time){
+            var date=new Date(time)
+            var y=date.getFullYear();
+            var m=date.getMonth()+1;
+            m=m<10?('0'+m):m;
+            var d=date.getDate();
+            d=d<10?('0'+d):d;
+            return y+'.'+m+'.'+d
         }
-        
     },
     data(){
         return {
             dateText:new Date().toLocaleDateString(),
             datetime:"",
-            startdate:new Date(2017,0,1),
-            enddate:new Date()
+            startdate:new Date(2017,0,1), 
+            enddate: new Date(),
+            slots:{values:["1个月","2个月","3个月","4个月","5个月","6个月"]}
         }
     },
     methods:{
@@ -124,13 +130,16 @@ export default {
             this.$router.push("/");
             this.$toast("开封成功")
         },
-        buyTime(){
+        openPicker(){
             this.datetime=this.dateText;
             this.$refs.picker.open();
+            
         },
-        
-        confirm(){
-            this.dateText=this.datetime
+        checkinCancel() {
+            this.$refs.picker.close();
+        },
+        handleConfirm(){
+            this.dateText=this.datetime 
         }
 
     }
