@@ -5,15 +5,15 @@
         </div>
         <div class="bar">
             <div class="bar-item">
-                <img src="../../../assets/xihuan.png" style="width:50px;height:50px;"/>
+                <img src="../../../assets/xihuan.png" style="width:45px;height:45px;"/>
                 <span>赞和收藏</span>
             </div>
             <div class="bar-item">
-                <img src="../../../assets/web-icon_kexiedaichongwu.png" style="width:50px;height:50px;"/>
+                <img src="../../../assets/web-icon_kexiedaichongwu.png" style="width:45px;height:45px;"/>
                 <span>新增关注</span>
             </div>
             <div class="bar-item">
-                <img src="../../../assets/icon.png" style="width:50px;height:50px;"/>
+                <img src="../../../assets/icon.png" style="width:45px;height:45px;"/>
                 <span>评论和@</span>
             </div>
         </div>

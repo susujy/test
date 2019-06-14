@@ -9,7 +9,7 @@
       :title="item.title"
       :comment="item.comment"
       :price="item.price"
-      :imgurl="require('../../../assets/i000044215_0_1_1_3.png')"
+      :imgurl="require(`../../../assets/${item.id}.jpg`)"
       :itemClick="clickitem"
      ></facewash>
      

@@ -88,7 +88,7 @@ span,p{font-family:"微软雅黑";font-weight:light}
     height:300px;
     padding-left:25px;
     padding-right:25px;
-    background-color:#ffa599;
+    background-color:#fea3cc;
 }
 .set{
     text-align:right;

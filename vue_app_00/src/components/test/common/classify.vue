@@ -98,13 +98,18 @@
                 </a>
             </div>
         </div>
-    </div>
+        <!-- <orderlist></orderlist> -->
+    </div>   
 </template>
 <script>
+import order from './orderlist'
 export default {
     data() {
         return {
         }
+    },
+    components:{
+        "orderlist":order
     },
     methods: {
         jumplist(){

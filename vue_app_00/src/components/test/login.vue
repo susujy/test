@@ -2,7 +2,7 @@
 	<div>
 		<div class="container">
 			<div class="beauty_makeup">
-				<img class="imgmz" src="../../assets/xiaocao.png" alt="" style="border:1px solid #666 border-radius:50%">
+				<img class="imgmz" src="../../assets/logo.jpg" alt="" style="border:1px solid #000 border-radius:50%">
 				<p>吃瓜种草团</p>
 			</div>
 
@@ -96,6 +96,10 @@ export default {
 </script>
 <style scoped>
 /* 美妆心得图片 */
+div.container{
+	background-image:url("../../assets/bg2.jpg");
+	background-size: 100% 100%;
+}
 .beauty_makeup{
 	height:200px;
 	text-align: center;
@@ -103,12 +107,14 @@ export default {
 .imgmz{
 	width:70px;
 	height:70px;
-	margin-top:80px; 
+	margin-top:91px; 
+	/* border:1px solid #ccc; */
+	box-shadow:0px 2px  5px -1px #ccc;
 }
 .beauty_makeup>p{
 	position: absolute;
 	top:170px;
-	left:145px;
+	left:135px;
 	color:#ff4984;
 	font-family: "STXingkai";
 	font-size:22px;
@@ -157,9 +163,9 @@ export default {
 	margin-left:45px;
 	margin-top:25px;
 	padding:5px 0px;
-	background-color:#ffe1e6;
+	background-color:#e871a7;
 	font-size:17px;
-	color:#ff4984;
+	color:#fff;
 }
 #a3{
 	display: inline-block;
