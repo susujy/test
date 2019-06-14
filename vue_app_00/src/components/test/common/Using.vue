@@ -273,8 +273,11 @@ export default {
 /*产品图片样式*/ 
 .pImg{width:80px}
 .product{
+    width:100%;
+    align-items:center;
     display:flex;
     height:100px;
+
 }
 /*产品左侧文本样式*/ 
 .freeplus{

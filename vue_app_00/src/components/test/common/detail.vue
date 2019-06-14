@@ -13,7 +13,7 @@
             <div>
                 <button class="btn1">种草</button>
                 <img class="imgxc" src="../../../assets/xiaocao.png" alt="">
-                <button class="btn2">开封</button>
+                <button class="btn2" @click="toopen">开封</button>
                 <img class="imgkf" src="../../../assets/ruye.png" alt="">
             </div>
     </div>
@@ -24,6 +24,12 @@
         data(){
             return {
 
+            }
+            
+        },
+        methods:{
+            toopen(){
+                this.$router.push("/using")
             }
         }
     }

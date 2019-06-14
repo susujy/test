@@ -7,6 +7,8 @@ import Header from './components/test/common/header.vue'
 import login from './components/test/login'
 //引入我的页面
 import Me from './components/test/common/Me.vue'
+import Setdetail from './components/test/common/Setdetail.vue'
+import Bag from './components/test/common/Bag.vue'
 // 商品详情页面
 import product from './components/test/product.vue'
 // import banner from './components/test/common/banner'
@@ -30,7 +32,7 @@ export default new Router({
     // {path:"/banner",component:banner},
     // {path:"/goods",component:goods},
     // {path:'/wash',component:wash},
-    {path:"/orderlist",component:orderlists},
+    //{path:"/orderlist",component:orderlists},
 
     // {path:'/bar',component:bar},
     // // 评论页面
@@ -39,6 +41,8 @@ export default new Router({
     // {path:"/classify",component:classify}
     //我的页面
     {path:'/me',component:Me},
+    {path:'/setdetail',component:Setdetail},
+    {path:'/bag',component:Bag},
     //开封
     {path:'/using',component:Using},
     {path:'/Wash',component:Wash},
