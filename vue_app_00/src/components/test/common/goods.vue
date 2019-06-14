@@ -190,10 +190,10 @@
     </div>
  </template>
 <script>
- import recom from './recom'
+
     export default {
         components:{
-            "recom":recom
+           
         },
         data(){
             return {
@@ -215,7 +215,7 @@
                 list4:[{lid:1,url:require('../../../assets/mm1.jpg'),dec:"欧莱雅(LOREAL) 复颜贴合提拉弹力滋润营养;保湿补水 L’OREAL"},
                     {lid:2,url:require('../../../assets/mm2.jpg'),dec:"cpb 肌肤之钥 集中护理面贴膜 修护肌肤 提拉紧致 紧肤淡皱"},
                     {lid:3,url:require('../../../assets/mm3.jpg'),dec:"科颜氏(Kiehl’s)亚马逊白泥净致面膜125ml（又名：亚马逊白泥净肤面膜）温和清洁 去黑头"},
-                        {lid:4,url:require('../../../assets/mm4.jpg'),dec:"ORIGINS 悦木之源 ;收缩毛 ;修护 活性炭清透洁肤面膜 水洗面膜"}
+                        {lid:4,url:require('../../../assets/mm4.jpg'),dec:"ORIGINS 悦木之源 ;收缩毛 ;修护 活性炭清透洁肤面膜 水洗面膜 "}
                 ],
                 tabsName: [{
 					name: "卸妆排行",
