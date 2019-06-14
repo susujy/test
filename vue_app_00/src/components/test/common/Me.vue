@@ -157,7 +157,7 @@ span,p{font-family:"微软雅黑";font-weight:light}
 .iconfont{font-size:24px;}
 .icon-shezhi1{color:#fff;}
 .icon-shoucangdetiezi{color:goldenrod}
-.icon-aixin{color:deeppink;}
+.icon-aixin{color:#fea3cc;}
 .icon-wodetiezi{color:rgb(243, 50, 50);}
 .icon-xiaoxi-shixin{color:rgb(91, 194, 241);font-size:22px;}
 </style>
