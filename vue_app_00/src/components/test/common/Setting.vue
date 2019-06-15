@@ -68,7 +68,7 @@ export default {
 }
 .icon-text{
     font-size:14px;
-    font-family: "微软雅黑";
+    font-family: "黑体";
     color:#000;
     margin-left:15px
 }

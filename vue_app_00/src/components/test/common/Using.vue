@@ -252,7 +252,7 @@ export default {
 .page-contain{
     padding-left:12px;
     padding-right:12px;
-    font-family: "微软雅黑"
+    font-family: "黑体"
 }
 /*顶部div*/ 
 .page-head{
