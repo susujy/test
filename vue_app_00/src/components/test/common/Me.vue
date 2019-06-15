@@ -1,7 +1,7 @@
 <template>
     <div class="page-head">
         <div class="contain">
-            <div class="set">
+            <div class="set" @click="toset">
                 <i class="iconfont icon-shezhi1"></i>
             </div>
             <div class="head">
@@ -46,8 +46,8 @@
                     <p>帖子</p>
                 </div>
                 <div>
-                    <i class="iconfont icon-xiaoxi-shixin"></i>
-                    <p>消息</p>
+                    <i class="iconfont icon-fulishe-yixuanzhong"></i>
+                    <p>化妆包</p>
                 </div>
             </div>
         </div>
@@ -72,6 +72,9 @@ export default {
     methods:{
         tologin(){
             this.$router.push("/Login")
+        },
+        toset(){
+            this.$router.push("/setdetail")
         }
     },
     components:{
@@ -159,5 +162,5 @@ span,p{font-family:"黑体";font-weight:lighter}
 .icon-shoucangdetiezi{color:goldenrod}
 .icon-aixin{color:#fea3cc;}
 .icon-wodetiezi{color:rgb(243, 50, 50);}
-.icon-xiaoxi-shixin{color:rgb(91, 194, 241);font-size:22px;}
+.icon-fulishe-yixuanzhong{color:rgb(91, 194, 241);font-size:22px;}
 </style>
