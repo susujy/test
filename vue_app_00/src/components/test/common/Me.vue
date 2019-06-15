@@ -38,14 +38,14 @@
                     <p>收藏</p>
                 </div>
                 <div>
-                    <i class="iconfont icon-aixin"></i>
+                    <i class="iconfont icon-yishoucang"></i>
                     <p>心得</p>
                 </div>
                 <div>
                     <i class="iconfont icon-wodetiezi"></i>
                     <p>帖子</p>
                 </div>
-                <div>
+                <div @click="tobag">
                     <i class="iconfont icon-fulishe-yixuanzhong"></i>
                     <p>化妆包</p>
                 </div>
@@ -75,7 +75,10 @@ export default {
         },
         toset(){
             this.$router.push("/setdetail")
-        }
+        },
+        tobag(){
+            this.$router.push("/bag")
+        },
     },
     components:{
         "setting":Setting
@@ -157,10 +160,10 @@ span,p{font-family:"黑体";font-weight:lighter}
 .like p{color:#000;margin-top:5px;}
 .like div{text-align:center;}
 /*修改icon的颜色*/ 
-.iconfont{font-size:24px;}
+.iconfont{font-size:22px;}
 .icon-shezhi1{color:#fff;}
 .icon-shoucangdetiezi{color:goldenrod}
-.icon-aixin{color:#fea3cc;}
+.icon-yishoucang{color:#fea3cc;font-size:24px;}
 .icon-wodetiezi{color:rgb(243, 50, 50);}
-.icon-fulishe-yixuanzhong{color:rgb(91, 194, 241);font-size:22px;}
+.icon-fulishe-yixuanzhong{color:rgb(91, 194, 241);}
 </style>

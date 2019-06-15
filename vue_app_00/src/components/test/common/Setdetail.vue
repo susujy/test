@@ -60,10 +60,12 @@ export default {
     },
     methods:{
         up(){
-            this.$router.push("/me")
+            // this.$router.push("/me")
+            history.go(1)
         },
         jumplogin(){
             this.$router.push("/login")
+            
         }
     }
 }
